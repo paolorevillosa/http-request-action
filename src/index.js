@@ -31,7 +31,9 @@ if (!!core.getInput('bearerToken')) {
 const instanceConfig = {
   baseURL: core.getInput('url', { required: true }),
   timeout: parseInt(core.getInput('timeout') || 5000, 10),
-  headers: { ...headers, ...customHeaders }
+  headers: { ...headers, ...customHeaders },
+  maxContentLength: Infinity,
+  maxBodyLength: Infinity,
 }
 
 const data = core.getInput('data') || '{}';
