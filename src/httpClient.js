@@ -95,8 +95,6 @@ const updateConfig = async (instanceConfig, formData, actions) => {
 
     return { 
       ...instanceConfig, 
-      maxContentLength: Infinity,
-      maxBodyLength: Infinity,
       headers: { 
         ...instanceConfig.headers, 
         ...formHeaders,
